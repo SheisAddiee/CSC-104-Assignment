@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="ci.js"></script> 
+    <script src="si.js"></script>
+    <script src="temp.js"></script>
+    <script src="currency.js"></script>
+    <title>CSC 104 Assignment</title>
+
+</head>
+<body>
+    <p>Calculate it</p>
+    <h2>CGPA Calculator</h2>
+ 
+<label for="gradeCSC104">Grade for CSC 104:</label>
+<select id="gradeCSC104" onchange="calculateCGPA()">
+  <option value="4.0">A</option>
+  <option value="3.5">B+</option>
+  <option value="3.0">B</option>
+  <option value="2.5">C+</option>
+  <option value="2.0">C</option>
+  <option value="1.5">D+</option>
+  <option value="1.0">D</option>
+  <option value="0.0">F</option>
+</select>
+<br><br>
+ 
+<label for="gradeCSC105">Grade for CSC 105:</label>
+<select id="gradeCSC105" onchange="calculateCGPA()">
+  <option value="4.0">A</option>
+  <option value="3.5">B+</option>
+  <option value="3.0">B</option>
+  <option value="2.5">C+</option>
+  <option value="2.0">C</option>
+  <option value="1.5">D+</option>
+  <option value="1.0">D</option>
+  <option value="0.0">F</option>
+</select>
+<br><br>
+ 
+<p>CGPA: <span id="cgpa">0.00</span></p>
+ 
+<script>
+function calculateCGPA() {
+    var gradeCSC104 = parseFloat(document.getElementById("gradeCSC104").value);
+    var gradeCSC105 = parseFloat(document.getElementById("gradeCSC105").value);
+   
+    var totalGradePoints = (gradeCSC104 * 2) + (gradeCSC105 * 3);
+    var totalUnits = 2 + 3;
+   
+    var cgpa = totalGradePoints / totalUnits;
+   
+    document.getElementById("cgpa").innerHTML = cgpa.toFixed(2);
+}
+</script>
+ 
+
+</body>
+</html>
