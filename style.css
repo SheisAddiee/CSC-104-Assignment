@@ -1,0 +1,274 @@
+*,::after,::before{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0 100px;
+  background-color: #ffeae0;
+}
+
+
+/* ~~~~~~~~~~MENU~~~~~~~~~ */
+.nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.nav .logo h1{
+  font-weight: 600;
+  font-family: sans-serif;
+  color: #000000;
+}
+
+.nav .logo b{
+  color: #ff511c;
+
+}
+
+.nav ul{
+  display: flex;
+  list-style: none;
+}
+
+.nav ul li{
+  margin-right:  30px; 
+}
+
+.nav ul li a{
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+  font-family: sans-serif;
+  font-size: 17px;
+}
+
+/* ~~~~~~~~~~ACTIVE~~~~~~~~~ */
+
+.nav ul .active::after{
+  content: '';
+  width: 50%;
+  height: 3px;
+  background-color: #ff511c;
+  display: flex;
+  position: relative;
+  margin-left: 15px;
+}
+
+
+
+
+/* ~~~~~~~~~~INPUT~~~~~~~~~ */
+
+input{
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.signin{
+  background-color:  #ffeae0;
+  border: none;
+  
+}
+
+.signup{
+  background-color: #ff511c;
+  color: #ffffff;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+
+/* ~~~~~~~~~~CONTENT~~~~~~~~~ */
+
+.content{
+  display: grid;
+  grid-template-columns: 50% auto;
+  gap: 30px;
+  margin-top: 120px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+
+/* #Content TEXT */
+/* ~~~~~~~~~~LEFT-SIDE~~~~~~~~~ */
+ .content .content-left{
+  display: block; 
+  width: 100%;
+}
+
+.content .content-left .info{
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content .content-left .info h2{
+  font-size: 60px;
+  font-family: sans-serif;
+  margin-bottom: 30px;
+}
+
+.content .content-left .info p{
+  font-size: 23px;
+  line-height: 2pc;
+  margin-bottom: 30px;
+  font-family: sans-serif ;
+} 
+
+
+/* #Content   */
+/* ~~~~~~~~~~BUTTON~~~~~~~~~ */
+
+.content .content-left button{
+  padding: 10px 23px;
+  background-color: #ff511c;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* #Content IMAGE  */
+/* ~~~~~~~~~~RIGHT-SIDE~~~~~~~~~ */
+
+.content .content-right{
+  display: block;
+  width: 100%;
+
+}
+.content .content-right img{
+  width: 700px;
+  height: auto;
+  position: relative;
+  user-select: none;
+  animation: rotate 10s linear infinite;
+}
+
+
+/* #Content  */
+/* ~~~~~~~~~~ANIMATION~~~~~~~~~ */
+
+@keyframes rotate {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ~~~~~~~~~~CARDS~~~~~~~~~ */
+
+.catergory{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.catergory .list-items{
+  margin-top: 50px;
+}
+
+.catergory .list-items .card-list{
+  display: grid;
+  grid-template-columns: repeat(6,2fr);
+  gap: 50px;
+} 
+
+
+.catergory .card-list .card{
+  width: 200px;
+  height: auto;
+  display: block;
+  padding: 10px;
+  color:initial;
+  text-decoration: none;
+  border-radius: 10px;
+  position: relative;
+  background: #ffffff;
+  outline: 2px solid #faad26;
+}
+
+.catergory .card-list .card img{
+  width: 120px;
+  height: auto;
+  bottom: 210px;
+  left: 35px;
+  object-fit: cover;
+  object-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  border-radius: 30%;
+  margin-top: 200px;
+  box-shadow: 0px 10px 10px -9px #faad26 ;
+} 
+
+/* .catergory .card-list .card img{
+  width: 1200px;
+  height: auto;
+  bottom: 140px;
+  left: 50px;
+  object-fit: cover;
+  object-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  border-radius: 50%;
+  margin-top: 200px;
+  box-shadow: 0 20px 20px  #faad26 ;
+} */
+
+.catergory .card-list .card .food-title{
+  padding: 40px 0 10px;
+}
+
+.catergory .card-list .card .food-title h1{
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.catergory .card-list .desc-food{
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-family: sans-serif;
+}
+
+.catergory .card .price{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.catergory .card .price span{
+  font-weight: 600;
+  font-family: sans-serif;
+}
+
+.catergory .card .price span .plus-icon{
+  color: #ff511c;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ~~~~~~~~~~ scroll-bar  ~~~~~~~~~ */
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  border-radius: 20px;
+  background-color: #ff511c;
+}
