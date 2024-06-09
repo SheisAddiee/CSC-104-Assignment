@@ -1,0 +1,131 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #ffeae0;
+  margin: 0;
+  padding: 0;
+}
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 50px;
+  gap: 30px;
+}
+
+.user-info-card {
+  border: 1px solid #ff511c;
+  border-radius: 20px;
+  padding: 20px;
+}
+.user-info-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.col-span-2{
+  grid-column: span 2;
+}
+label {
+  font-size: 13px;
+}
+input[type="text"] {
+  border: 1px solid #ff511c;
+  padding:10px;
+  border-radius:10px;
+}
+
+.payment-method-card {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 20px;
+  border: 1px solid #ff511c;
+  padding: 20px;
+}
+
+.flex.justify-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-left: 12px;
+}
+.summary-container {
+  border-radius: 50%;
+  margin-left: 5px;
+  margin-right: 15px;
+}
+.summary {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 100%;
+  margin-left: 3px;
+}
+.payment-method {
+  margin-bottom: 20px;
+}
+.payment-method button {
+  display: block;
+  margin-bottom: 18px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+}
+.total {
+  font-weight: bold;
+  border-top: 2px solid #000000;
+  padding: 15px;
+}
+.payment-btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #ff511c;
+  transition: 0.5s;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-right: 15px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.payment-btn:hover {
+  background-color: white;
+  color: #ff511c;
+  border: 1px solid #ff511c;
+}
+/* .tot {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  width: 85%;
+  border-top: 1px black solid;
+} */
